@@ -41,3 +41,14 @@ body {
 
 
 /* PATICKA */
+
+/* VERZE PRO TABLET */
+@media (min-width: 500px){
+
+}
+
+
+/* VERZE PRO PC */
+@media (min-width: 1000px){
+    
+}
