@@ -67,10 +67,16 @@ body {
     flex-direction: column;
     text-transform: uppercase;
     margin: 5%;
+    margin-top: 0;
     padding: 0;
+    padding-top: 5%;
 }
 
 /* OBSAH */
+.obsah {
+    background-color: white;
+}
+
 .text,
 .text-uvod,
 .text-pravo,
@@ -122,7 +128,22 @@ img {
 /* VERZE PRO TABLET */
 @media (min-width: 500px) {
 
-    /* MENU */
+    body {
+        background-color: white;
+    }
+
+    /* HLAVICKA PRO TABLET */
+    .autor::before {
+        content: "";
+        display: block;
+        width: 100px;
+        height: 2px;
+        background-color: lightgray;
+        margin: 20px 40% 10px 40%;
+        padding: 0;
+    }
+
+    /* MENU PRO TABLET */
     .menu a {
         text-decoration: none;
         text-align: center;
@@ -142,8 +163,8 @@ img {
     .menu {
         list-style: none;
         text-transform: uppercase;
-
         padding: 0;
+        margin-top: 5%;
         border-top: 1px solid lightgrey;
         border-bottom: 1px solid lightgrey;
         display: flex;
@@ -151,7 +172,15 @@ img {
         justify-content: space-between;
     }
 
-    /* OBRÁZKY MIMO FOTOGALERII */
+    /* OBSAH PRO TABLET */
+    h2,
+    .text,
+    .text-pravo,
+    .text-uvod {
+        margin: 5%;
+    }
+
+    /* OBRÁZKY MIMO FOTOGALERII PRO TABLET */
     .obrazek-v-textu {
         position: relative;
     }
@@ -167,7 +196,7 @@ img {
         color: white;
     }
 
-    /* FOTOGALERIE */
+    /* FOTOGALERIE PRO TABLET */
     .popisek {
         display: none;
     }
@@ -183,7 +212,6 @@ img {
         flex-basis: 50%;
     }
 }
-
 
 /* VERZE PRO PC */
 @media (min-width: 1000px) {
@@ -234,6 +262,11 @@ img {
         margin: 5%;
         padding: 0;
         width: 250px;
+        float: left;
+    }
+
+    .text-uvod {
+        padding-left: 0%;
     }
 
     /* FOTOGALERIE PRO PC */
