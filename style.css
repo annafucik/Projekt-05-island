@@ -205,9 +205,6 @@ img {
     }
 
     /* FOTOGALERIE PRO TABLET */
-    .popisek {
-        display: none;
-    }
 
     .galerie {
         display: flex;
@@ -218,104 +215,6 @@ img {
     .foto {
         display: flex;
         flex-basis: 50%;
-    }
-}
-
-/* VERZE PRO PC */
-@media (min-width: 1000px) {
-
-    /* HLAVICKA PRO PC */
-    .hlavicka {
-        padding: 10%;
-    }
-
-    /* OBSAH PRO PC */
-    h2,
-    .text,
-    .text-pravo {
-        margin: 3% 5%;
-    }
-
-    .text-uvod {
-        padding: 5%;
-        margin: 0;
-    }
-
-    .text-pravo h2 {
-        margin: 0;
-    }
-
-    .pruh::after {
-        margin: 0;
-    }
-
-    .obsah {
-        display: block;
-        background-color: white;
-        width: 960px;
-        margin-top: -8%;
-        margin-left: 30%;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    }
-
-    .body {
-        background-color: #f5f5f5;
-    }
-
-    .text {
-        margin-right: 20%;
-    }
-
-    .text-pravo {
-        margin-left: 20%;
-    }
-
-    /* MENU PRO PC */
-    .menu a {
-        text-decoration: none;
-        color: gray;
-        text-align: left;
-        padding: 5%;
-    }
-
-    .menu {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        text-transform: uppercase;
-        margin: 5%;
-        margin-bottom: 300px;
-        padding: 0;
-        width: 250px;
-        float: left;
-        border-top: none;
-    }
-
-    .border {
-        border-bottom: 1px solid lightgrey;
-        border-right: none;
-        border-top: none;
-    }
-
-    .border2 {
-        border-top: none;
-    }
-
-    /* FOTOGALERIE PRO PC */
-
-    .galerie {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        border-spacing: 0;
-        margin-top: 4%;
-    }
-
-    .foto {
-        display: flex;
-        flex-direction: column;
-        flex-basis: 33%;
-        flex-grow: 1;
         display: block;
         position: relative;
         overflow: hidden;
@@ -339,11 +238,128 @@ img {
         margin: 0;
     }
 
-    /* PATICKA PRO PC */
-    .paticka {
-        background-color: #f5f5f5;
-        padding: 5% 5% 2% 5%;
-        color: gray;
-        box-shadow: none;
+    /* VERZE PRO PC */
+    @media (min-width: 1000px) {
+
+        /* HLAVICKA PRO PC */
+        .hlavicka {
+            padding: 10%;
+        }
+
+        /* OBSAH PRO PC */
+        h2,
+        .text,
+        .text-pravo {
+            margin: 3% 5%;
+        }
+
+        .text-uvod {
+            padding: 5%;
+            margin: 0;
+        }
+
+        .text-pravo h2 {
+            margin: 0;
+        }
+
+        .pruh::after {
+            margin: 0;
+        }
+
+        .obsah {
+            display: block;
+            background-color: white;
+            width: 960px;
+            margin-top: -8%;
+            margin-left: 30%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .body {
+            background-color: #f5f5f5;
+        }
+
+        .text {
+            margin-right: 20%;
+        }
+
+        .text-pravo {
+            margin-left: 20%;
+        }
+
+        /* MENU PRO PC */
+        .menu a {
+            text-decoration: none;
+            color: gray;
+            text-align: left;
+            padding: 5%;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            text-transform: uppercase;
+            margin: 5%;
+            margin-bottom: 300px;
+            padding: 0;
+            width: 250px;
+            float: left;
+            border-top: none;
+        }
+
+        .border {
+            border-bottom: 1px solid lightgrey;
+            border-right: none;
+            border-top: none;
+        }
+
+        .border2 {
+            border-top: none;
+        }
+
+        /* FOTOGALERIE PRO PC */
+
+        .galerie {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-top: 4%;
+        }
+
+        .foto {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 33%;
+            flex-grow: 1;
+            display: block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .foto img {
+            transition: 0, 3s;
+            display: block;
+        }
+
+        .foto:hover .popisek {
+            transform: translateY(-100%);
+        }
+
+        .popisek {
+            display: block;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            position: absolute;
+            width: 100%;
+            margin: 0;
+        }
+
+        /* PATICKA PRO PC */
+        .paticka {
+            background-color: #f5f5f5;
+            padding: 5% 5% 2% 5%;
+            color: gray;
+            box-shadow: none;
+        }
     }
-}
