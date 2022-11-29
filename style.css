@@ -92,6 +92,8 @@ h2 {
 
 .popisek,
 .popisek-v-textu,
+.popisek-v-textu3,
+.popisek-v-textu3 a,
 .popisek a,
 .popisek-v-textu a {
     text-align: center;
@@ -207,14 +209,14 @@ img {
 
     .popisek-v-textu {
         position: absolute;
-        left: 79%;
+        left: 75%;
         bottom: -5%;
     }
 
     .popisek-v-textu3 {
         position: absolute;
-        left: 70%;
-        bottom: 1%;
+        left: 65%;
+        bottom: -5%;
     }
 
     .popisek-v-textu,
