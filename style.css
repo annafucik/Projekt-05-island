@@ -29,6 +29,8 @@ body {
 
 .hlavicka {
     background: url("images/island-hlavicka.jpg");
+    color: black;
+    background-color: black;
     background-position: center center;
     background-size: cover;
     color: white;
@@ -44,7 +46,7 @@ body {
 .autor::before {
     content: "";
     display: block;
-    width: 100px;
+    width: 90px;
     height: 2px;
     background-color: lightgray;
     margin: 20px 40% 10px 40%;
@@ -85,7 +87,7 @@ body {
 .text-uvod,
 .text-pravo,
 h2 {
-    margin: 10% 5% 5% 5%;
+    margin: 5%;
 }
 
 .popisek,
@@ -101,13 +103,14 @@ img {
     width: 100%;
 }
 
-.pruh::after {
+.pruh::after,
+.pruh-pravo::after {
     content: "";
     display: block;
-    width: 150px;
+    width: 100px;
     height: 5px;
     background-color: rgba(10, 99, 242, 0.687);
-    margin: 5% 0px;
+    margin: 5% 0;
 }
 
 /* FOTOGALERIE */
@@ -137,6 +140,10 @@ img {
     }
 
     /* HLAVICKA PRO TABLET */
+    .titulek {
+        font-size: 70px;
+    }
+
     .autor::before {
         content: "";
         display: block;
@@ -186,6 +193,10 @@ img {
     .text-pravo,
     .text-uvod {
         margin: 5%;
+    }
+
+    h2 {
+        font-size: 30px;
     }
 
     /* OBRÁZKY MIMO FOTOGALERII PRO TABLET */
@@ -238,128 +249,163 @@ img {
         margin: 0;
     }
 
-    /* VERZE PRO PC */
-    @media (min-width: 1000px) {
-
-        /* HLAVICKA PRO PC */
-        .hlavicka {
-            padding: 10%;
-        }
-
-        /* OBSAH PRO PC */
-        h2,
-        .text,
-        .text-pravo {
-            margin: 3% 5%;
-        }
-
-        .text-uvod {
-            padding: 5%;
-            margin: 0;
-        }
-
-        .text-pravo h2 {
-            margin: 0;
-        }
-
-        .pruh::after {
-            margin: 0;
-        }
-
-        .obsah {
-            display: block;
-            background-color: white;
-            width: 960px;
-            margin-top: -8%;
-            margin-left: 30%;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .body {
-            background-color: #f5f5f5;
-        }
-
-        .text {
-            margin-right: 20%;
-        }
-
-        .text-pravo {
-            margin-left: 20%;
-        }
-
-        /* MENU PRO PC */
-        .menu a {
-            text-decoration: none;
-            color: gray;
-            text-align: left;
-            padding: 5%;
-        }
-
-        .menu {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            text-transform: uppercase;
-            margin: 5%;
-            margin-bottom: 300px;
-            padding: 0;
-            width: 250px;
-            float: left;
-            border-top: none;
-        }
-
-        .border {
-            border-bottom: 1px solid lightgrey;
-            border-right: none;
-            border-top: none;
-        }
-
-        .border2 {
-            border-top: none;
-        }
-
-        /* FOTOGALERIE PRO PC */
-
-        .galerie {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            margin-top: 4%;
-        }
-
-        .foto {
-            display: flex;
-            flex-direction: column;
-            flex-basis: 33%;
-            flex-grow: 1;
-            display: block;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .foto img {
-            transition: 0, 3s;
-            display: block;
-        }
-
-        .foto:hover .popisek {
-            transform: translateY(-100%);
-        }
-
-        .popisek {
-            display: block;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            position: absolute;
-            width: 100%;
-            margin: 0;
-        }
-
-        /* PATICKA PRO PC */
-        .paticka {
-            background-color: #f5f5f5;
-            padding: 5% 5% 2% 5%;
-            color: gray;
-            box-shadow: none;
-        }
+    /* PATICKA PRO TABLET */
+    .paticka {
+        padding: 2%;
     }
+}
+
+/* VERZE PRO PC */
+@media (min-width: 1000px) {
+
+    /* HLAVICKA PRO PC */
+    .hlavicka {
+        padding: 10%;
+    }
+
+    .titulek {
+        font-size: 100px;
+    }
+
+    /* MENU PRO PC */
+    .menu a {
+        text-decoration: none;
+        color: gray;
+        justify-content: left;
+        padding: 5%;
+    }
+
+    .menu {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        margin: 5%;
+        margin-bottom: 300px;
+        padding: 0;
+        width: 250px;
+        float: left;
+        border-top: none;
+    }
+
+    .border {
+        border-bottom: 1px solid lightgrey;
+        border-right: none;
+        border-top: none;
+    }
+
+    .border2 {
+        border-top: none;
+    }
+
+    /* OBSAH PRO PC */
+    h2,
+    .text,
+    .text-pravo,
+    .nadpis-pravo {
+        margin: 3% 5%;
+    }
+
+    .text,
+    .text-pravo {
+        margin-bottom: 5%;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+    .text-uvod {
+        padding: 5%;
+        margin: 0;
+    }
+
+    .pruh::after,
+    .pruh-pravo::after {
+        margin: 0;
+    }
+
+    .text {
+        margin-right: 30%;
+    }
+
+    .obsah {
+        display: block;
+        background-color: white;
+        width: 960px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        margin: auto;
+        margin-top: -5%;
+    }
+
+    /*.body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } */
+
+    body {
+        background-color: #f5f5f5;
+    }
+
+    /* zarovnání textu doprava */
+    .text-pravo {
+        margin-left: 30%;
+    }
+
+    .nadpis-pravo {
+        margin-left: 30%;
+    }
+
+    .pruh-pravo::after {
+        margin-left: 250px;
+    }
+
+    /* FOTOGALERIE PRO PC */
+    .galerie {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 4%;
+    }
+
+    .foto {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 33%;
+        flex-grow: 1;
+        display: block;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .foto img {
+        transition: 0, 3s;
+        display: block;
+    }
+
+    .foto:hover .popisek {
+        transform: translateY(-100%);
+    }
+
+    .popisek {
+        display: block;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        position: absolute;
+        width: 100%;
+        margin: 0;
+    }
+
+    /* PATICKA PRO PC */
+    .paticka {
+        background-color: #f5f5f5;
+        width: 960px;
+        display: block;
+        margin: auto;
+        padding: 0;
+        padding-top: 3%;
+        color: gray;
+        box-shadow: none;
+    }
+}
